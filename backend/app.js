@@ -17,7 +17,7 @@ app.use("/merch", routes);
 mongoose.connect("mongodb+srv://admin:yx5htkBmT1S84Qxp@cluster0.idqotjc.mongodb.net/")
 .then(() => console.log("Database Connection Successfull !"))
 .then(() => {
-    app.listen(5000);
+    app.listen(3000);
 })
 .catch((err) => console.log((err)));
 
