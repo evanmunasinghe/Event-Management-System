@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import sliitLogo from "./logo.png";
 
@@ -16,15 +16,18 @@ function Navbar() {
 
         {/* Links */}
         <ul className="nav-menu">
-          <li><Link to="/mainhome">Home</Link></li>
-          <li><Link to="/merch">Merch</Link></li>
-          <li><Link to="/addmerch">Add Merch</Link></li>
+          <li><NavLink to="/mainhome">Home</NavLink></li>
+          <li><NavLink to="/merch">Merch</NavLink></li>
+          <li><NavLink to="/addmerch">Add Merch</NavLink></li>
+          <li><NavLink to="/cart">Cart</NavLink></li>
         </ul>
 
         {/* Right side */}
         <div className="nav-right">
-          <Link to="/cart" className="cart">
-            🛒 <span className="cart-count">0</span>
+          <Link to="/cart" className="cart" aria-label="Open cart page">
+            <span className="cart-icon" aria-hidden="true">🛒</span>
+            <span>Cart</span>
+            <span className="cart-count">0</span>
           </Link>
         </div>
 

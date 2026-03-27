@@ -197,11 +197,11 @@ function ViewMerch() {
           </label>
 
           <div className="button-row">
-            <button className="primary-button" type="submit">
+            <button className="detail-primary-button" type="submit">
               Save Changes
             </button>
             <button
-              className="secondary-button"
+              className="detail-secondary-button"
               type="button"
               onClick={() => setIsEditing(false)}
             >
@@ -227,17 +227,22 @@ function ViewMerch() {
           </div>
           <div className="button-row">
             <button
-              className="primary-button"
+              className="detail-primary-button"
+              type="button"
               onClick={() => setIsEditing(true)}
             >
               Edit
             </button>
-            <button className="danger-button" onClick={handleDelete}>
+            <button
+              className="detail-danger-button"
+              type="button"
+              onClick={handleDelete}
+            >
               Delete
             </button>
           </div>
-          <Link className="back-link" to="/merch">
-            <button className="secondary-button">Back to Merch List</button>
+          <Link className="detail-secondary-button back-link" to="/merch">
+            Back to Merch List
           </Link>
         </div>
         <div className="detail-visual">

@@ -61,6 +61,7 @@
   transition: 0.3s;
 }
 
+.nav-menu a.active,
 .nav-menu a:hover {
   color: #f0b429;
 }
@@ -73,20 +74,38 @@
 
 /* Cart */
 .cart {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   position: relative;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cart:hover {
+  background: rgba(240, 180, 41, 0.2);
+  transform: translateY(-1px);
+}
+
+.cart-icon {
+  font-size: 18px;
 }
 
 /* Cart badge */
 .cart-count {
   background: #f0b429;
   color: #092447;
-  border-radius: 50%;
+  border-radius: 999px;
+  min-width: 24px;
   padding: 3px 8px;
   font-size: 12px;
-  margin-left: 5px;
+  text-align: center;
 }
 
 @media (max-width: 720px) {

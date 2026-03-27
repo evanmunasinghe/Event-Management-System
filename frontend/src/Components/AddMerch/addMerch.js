@@ -196,7 +196,7 @@ function AddMerch() {
           )}
         </label>
 
-        <label className="form-field">
+        <div className="form-field upload-field">
           <span>Product Image</span>
           <input
             className="file-input"
@@ -216,17 +216,22 @@ function AddMerch() {
             onDragLeave={() => setIsDragging(false)}
             onDrop={handleDrop}
           >
-            <span className="upload-icon">+</span>
-            <span className="upload-title">Drag and drop an image here</span>
+            <span className="upload-icon">Upload</span>
+            <span className="upload-title">
+              {image ? "Replace product image" : "Choose your product image"}
+            </span>
             <span className="upload-subtitle">
-              or click this box to choose a file
+              {image
+                ? "Click here to browse and replace the current image."
+                : "Drag is optional. Click here to browse for an image."}
             </span>
-            <span className="upload-filename">
-              {image ? image.name : "No image selected"}
-            </span>
+            <span className="upload-meta">JPG, PNG or WEBP</span>
           </label>
+          {image ? (
+            <p className="upload-filename">Selected: {image.name}</p>
+          ) : null}
           {errors.image && <small className="form-error">{errors.image}</small>}
-        </label>
+        </div>
 
         <button className="primary-button form-submit" type="submit">
           Add Merch
