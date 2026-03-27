@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0b8c03d2.css",
+    "main.js": "/static/js/main.9288b596.js",
+    "static/media/SLIIT-malabe.jpg": "/static/media/SLIIT-malabe.ad8ca2b5f61cfde99a35.jpg",
+    "static/media/logo.png": "/static/media/logo.110da91abfc8eaac3b3e.png",
+    "index.html": "/index.html",
+    "main.0b8c03d2.css.map": "/static/css/main.0b8c03d2.css.map",
+    "main.9288b596.js.map": "/static/js/main.9288b596.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b8c03d2.css",
+    "static/js/main.9288b596.js"
+  ]
+}

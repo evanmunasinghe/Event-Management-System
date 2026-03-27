@@ -1,0 +1,49 @@
+.page-section {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.section-heading {
+  margin-bottom: 24px;
+}
+
+.section-heading h1 {
+  margin: 10px 0 0;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  color: var(--sliit-navy);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--sliit-gold);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.search-bar-wrap {
+  margin-bottom: 24px;
+}
+
+.search-bar {
+  width: min(480px, 100%);
+  border: 1px solid rgba(9, 36, 71, 0.14);
+  border-radius: 16px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--sliit-ink);
+  font: inherit;
+  box-shadow: 0 14px 32px rgba(10, 37, 71, 0.08);
+}
+
+.search-bar:focus {
+  outline: 2px solid rgba(26, 79, 156, 0.18);
+  border-color: var(--sliit-blue);
+}
+
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}

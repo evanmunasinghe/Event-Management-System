@@ -13,7 +13,8 @@ const getAllMerch = async (req, res,next) => {
 
 //data insert
 const addMerch = async (req, res, next) => {
-    const { name, description, price, stock, category, image } = req.body || {};
+    const { name, description, price, stock, category } = req.body || {};
+    const image = req.file ? `/uploads/${req.file.filename}` : "";
 
     if (!req.body || Object.keys(req.body).length === 0) {
         return res.status(400).json({
@@ -58,8 +59,11 @@ const updateMerch = async (req, res, next) => {
 
     let merch;
     try {
-        merch = await Merch.findByIdAndUpdate(id, { name, description, price, stock, category, image });
-        merch = await merch.save();
+        merch = await Merch.findByIdAndUpdate(
+            id,
+            { name, description, price, stock, category, image },
+            { new: true }
+        );
     } catch (err) {
         console.log(err);
     }  
@@ -74,9 +78,10 @@ const deleteMerch = async (req, res, next) => {
     const id = req.params.id;
     let merch;
     try {
-        merch = await Merch.findByIdAndRemove(id);
+        merch = await Merch.findByIdAndDelete(id);
     } catch (err) {
         console.log(err);
+        return res.status(500).json({ message: "Unable To Delete Your Merch" });
     }
     if (!merch) {
         return res.status(404).json({ message: "Unable To Delete Your Merch" });
